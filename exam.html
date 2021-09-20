@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>KBC Page</title>
+
+        <!--For CSS-->
+        <link rel="stylesheet" href="exam_style.css" />
+
+        <!--For Bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+        
+
+    </head>
+
+    <script type="text/javascript" src="exam_data.js"></script>
+    <script type="text/javascript" src="exam_script.js"> </script>
+
+    <body style="background-color: rgba(0,2,0,255);" onload="setTime(), setQuestion(1), setSound('Begning.mp3') ">
+
+        
+
+        <center>
+            <header >
+                <h1 style="color: cornsilk;">Koun Banega Crorepati</h1>
+            </header>
+        </center>
+            <div id="container">
+
+                <form action="KBC_Index.html" >
+                    <input type="submit" value="HOME">
+                </form>
+                <center>
+                    <div id="time" > </div>
+                </center>
+                
+                <div id="question">
+                    <p id="ques" class="ques-ans" ></p>
+                    
+                    <div id="options">
+                        <div  class="ques-ans">
+                            <input type="radio" name="option" value="A" id="A" class="radio1">
+                            <label id="a" for="A"> </label>
+                        </div>
+
+                        <div  class="ques-ans">
+                            <input type="radio" name="option" value="B" id="B" class="radio1">
+                            <label id="b" for='B'> </label>
+                        </div>
+
+                        <div  class="ques-ans">
+                            <input type="radio" name="option" value="C" id="C" class="radio1">
+                            <label id="c" for='C'> </label>
+                        </div>
+                        <div  class="ques-ans">
+                            <input type="radio" name="option" value="D" id="D" class="radio1">
+                            <label id="d" for='D'> </label>
+                        </div>
+                        </div>
+                        <div id="nav-section">
+                           <button value="Back" name="back" class="btn btn-success btn-lg" onclick="setQuestion(-1,'Launch.mp3')" id="back-button">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                     <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                                 </svg>
+                                 Back
+                             </button> 
+                             <button value="Next" name="next" class="btn btn-success btn-lg" onclick="setQuestion(1,'Launch.mp3')" id="next-button">
+                                 Next
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                     <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                 </svg>
+                             </button>
+                         </div>
+                </div>
+                
+            </div>
+    </body>
+
+</html>

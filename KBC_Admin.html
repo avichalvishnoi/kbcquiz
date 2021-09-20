@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>KBC Admin Page</title>
+
+        <!--  For Bootstrap  -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+        
+        <!-- For CSS file-->
+        <link rel = "stylesheet" href = "exam_style.css">
+    </head>
+
+ 
+   
+    <script type="text/javascript" src="exam_data.js"></script>
+    <script type="text/javascript" src="exam_script.js"> </script>
+
+    <body style="margin-left: 7vw; margin-right: 7vw;" onload="printQuestions();">
+        <center>
+            <header>
+                <h1 style="color: cornsilk;">KBC Admin Section</h1>
+            </header>
+
+                <h3 onclick="removeQues()"><em>(You can set questions here)</em></h3>
+                <hr>
+            
+        </center>
+
+          
+            <div id="ans-sec" class="row">
+                <label id="ques-label" for="ques" class="col-xs-1"></label>
+                <input type="text" id="new-ques" placeholder="Question" class="col-xs-11" style="height: 50px;" required>    <br><br>
+
+            
+                <input type="radio" name="corr-option" id="new-a" class="col-xs-1" value="A">
+                <input type="text" id="new-A" placeholder="Option A" class="col-xs-5" required>
+
+                <input type="radio" name="corr-option" id="new-b" class="col-xs-1" value="B">
+                <input type="text" id="new-B" placeholder="Option B" class="col-xs-5" required>   
+
+                <input type="radio" name="corr-option" id="new-c" class="col-xs-1" value="C">
+                <input type="text" id="new-C" placeholder="Option C" class="col-xs-5" required>
+
+                <input type="radio" name="corr-option" id="new-d" class="col-xs-1" value="D">
+                <input type="text" id="new-D" placeholder="Option D" class="col-xs-5" required>
+            
+            
+
+                <div id="nav-section">
+                    <button value="add" name="add" class="btn btn-info btn-lg" id="done-button" onclick="addQuestion()">
+                        ADD
+                    </button>
+                   
+                    <a href="KBC_Index.html">
+                    <button value="done" name="done" class="btn btn-info btn-lg" id="add-button" onclick="writeFile()">
+                          DONE
+                    </button> 
+                    </a>
+        
+                  </div>
+            </div>
+        
+        <p>NOTE: Tick on correct Ans</p>
+        <hr>
+
+        <center><br>
+            <h3><em>Questions List</em></h3>
+        </center><br>
+
+        <table id="allQuestions" style="font-size: 16px;">
+            <tr>
+                   
+                    <td><b>S. NO. </b></td>
+                    <td><b>Question</b></td>
+                    <td><b>Option A</b></td>
+                    <td><b>Option B</b></td>
+                    <td><b>Option C</b></td>
+                    <td><b>Option D</b></td>
+                    <td><b>Correct Option</b></td>
+                    <td><b>Edit/Remove</b></td>
+            </tr>
+        </table>
+
+        <footer style="height: 50px;">
+        </footer>
+
+    </body>
+
+</html>
